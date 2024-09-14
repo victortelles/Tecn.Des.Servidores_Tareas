@@ -55,7 +55,7 @@ http://localhost:3000/
 
 2. Ruta usuarios sin permiso
 ```bash
-http://localhost:3000/users
+http://localhost:3000/usuarios
 ```
 
 3. Ruta de usuarios con permisos admin o gerente
