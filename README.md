@@ -16,6 +16,8 @@ https://github.com/victortelles/Tecn.Des.Servidores_Tareas.git
 Abre la consola de tu computadora y navega al directorio del proyecto e instala las dependencias
 ```bash
 cd Tarea1
+```
+```bash
 npm install
 ```
 
@@ -59,6 +61,8 @@ http://localhost:3000/users
 3. Ruta de usuarios con permisos admin o gerente
 ```bash
 http://localhost:3000/usuarios?key=12345
+```
+```bash
 http://localhost:3000/usuarios?key=67890
 ```
 
