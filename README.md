@@ -65,6 +65,7 @@ http://localhost:3000/usuarios?key=12345
 ```bash
 http://localhost:3000/usuarios?key=67890
 ```
+De lo contrario si no existe la key, regresa un error 403
 
 
 
