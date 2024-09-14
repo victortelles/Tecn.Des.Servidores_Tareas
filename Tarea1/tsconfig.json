@@ -1,0 +1,10 @@
+{
+    "include": ["./src/**/*.ts", "index.ts"],  //Archivo origen
+    "compilerOptions": {
+        "outDir": "dist/scripts",       //Archivo destino, donde guardar
+        "target": "ES6",        //version de JS
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "module": "NodeNext"
+    }
+}
