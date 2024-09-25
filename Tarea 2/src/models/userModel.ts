@@ -1,8 +1,17 @@
 import { Schema, model, } from 'mongoose';
 import { IUser } from '../types/user';
 
+interface UserDocument extends Document {
+    firstName: string;
+    lastName: string;
+    email: string;
+    password: string;
+    role: string
+    status: string;
+}
+
 //Esqueleto del modelo de mongoDB usuario.
-const userSchema = new Schema<IUser> ({
+const userSchema = new Schema<UserDocument> ({
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     email: { type: String, required: true, unique: true },
@@ -12,5 +21,5 @@ const userSchema = new Schema<IUser> ({
 });
 
 //Exportacion
-const User = model<IUser>('User', userSchema);
+const User = model<UserDocument>('User', userSchema);
 export default User;
