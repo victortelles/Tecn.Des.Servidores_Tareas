@@ -1,4 +1,4 @@
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 
 // Funcion para encriptar las constraseñas
 export const hashPassword = async (password: string): Promise<string> => {

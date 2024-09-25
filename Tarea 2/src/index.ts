@@ -13,11 +13,12 @@ const port  = process.env.PORT || 3000;
 const dbUrl = process.env.DB_URL;
 //console.log('Mongo URL:', dbUrl);
 
+app.use(express.json());
 app.use(routes);
 
 //Conexion de MongoDB y arranque del servidor
 connect(dbUrl as string).then( res => {
-    console.log('Ya se conecto');
+    console.log('Ya se conecto a mongoDB');
     app.listen(port, () => {
         console.log(`Servidor escuchando en el puerto ${port}`);
     });
