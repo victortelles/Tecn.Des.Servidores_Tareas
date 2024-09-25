@@ -9,7 +9,4 @@ router.get('', (req, res) => {
     res.send('Hello World!');
 })
 
-// /users
-router.use('/users', userRoutes);
-
 export default router;
