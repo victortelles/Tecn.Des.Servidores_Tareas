@@ -1,6 +1,6 @@
 import { Router } from "express";
-import register from './register';
-import login from './login';
+import registerRoutes from './register';
+import loginRoutes from './login';
 
 //Rutas
 const router = Router();
@@ -11,9 +11,9 @@ router.get('', (req, res) => {
 })
 
 //register
-router.use('/register', register)
+router.use('/register', registerRoutes)
 
 //login
-router.use('/login', login)
+router.use('/login', loginRoutes)
 
 export default router;
