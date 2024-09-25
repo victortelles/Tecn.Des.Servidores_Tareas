@@ -35,7 +35,6 @@ class RegisterController {
         } catch (error) {
             console.error('Error durante la registro del usuario:', error);
             res.send(HTTP_STATUS_CODE.SERVER_ERROR).json({ message: 'Error al registrar '});
-
         }
     }
 }
