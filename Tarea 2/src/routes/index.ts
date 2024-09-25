@@ -1,4 +1,5 @@
 import { Router } from "express";
+import register from './register';
 
 //Rutas
 const router = Router();
@@ -7,5 +8,7 @@ const router = Router();
 router.get('', (req, res) => {
     res.send('Hello World!');
 })
+
+router.use('/register', register)
 
 export default router;
