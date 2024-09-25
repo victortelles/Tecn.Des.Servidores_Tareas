@@ -24,7 +24,7 @@ class LoginController {
             //Comparacion de contraseñas
             const isPasswordValid = await bcrypt.compare(password, user.password);
             if (!isPasswordValid) {
-                return res.status(HTTP_STATUS_CODE.UNAUTHORIZED).json({ message: 'Contraseña invalida'});
+                return res.status(HTTP_STATUS_CODE.UNAUTHORIZED).json({ message: 'Correo electronico o Contraseña son incorrectos'});
             }
 
             //Generacion de JWT Token
