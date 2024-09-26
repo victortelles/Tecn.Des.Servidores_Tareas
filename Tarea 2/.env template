@@ -1,0 +1,2 @@
+DB_URL= #Poner la URL de MongoDB
+JWT_SECRET = #Poner llave secreta ej: "secret_key"

@@ -1,0 +1,31 @@
+{
+  "name": "tarea2",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "scripts":"tsc",
+    "start":"node .",
+    "dev" : "nodemon ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Victor Telles 737066",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^8.6.3"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^22.5.5",
+    "nodemon": "^3.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
