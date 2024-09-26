@@ -33,7 +33,7 @@ class LoginController {
                 process.env.JWT_SECRET as string,
                 { expiresIn: '1h' }
             );
-            res.status(HTTP_STATUS_CODE.SUCCESS).json({ token })
+            res.status(HTTP_STATUS_CODE.SUCCESS).json({ message:`Inicio de sesion exitoso:` , token })
         } catch (error) {
             console.error(' Surgio un error durante el login' ,error);
             res.status(HTTP_STATUS_CODE.SERVER_ERROR).json({ message: 'Surgio un error durante el login '});
