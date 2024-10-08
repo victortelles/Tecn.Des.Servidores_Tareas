@@ -1,7 +1,13 @@
 import { Request } from "express";
 import multer, { diskStorage, FileFilterCallback } from "multer";
 import path from 'path';
+import fs from 'fs';
 
+// implementacion sobre la carpeta 'documents' existe, si no, crearla
+const documentsFolder = path.join(__dirname, '../../documents');
+if (!fs.existsSync(documentsFolder)) {
+    fs.mkdirSync(documentsFolder, { recursive: true });
+}
 
 //Subir archivo
 const storage = diskStorage({
