@@ -1,14 +1,14 @@
-import { Router} from 'express';
-import upload from '../routes/upload'
-import download from '../routes/download'
+import { Router } from 'express';
+import uploadRoutes from '../routes/upload';
+import downloadRoutes from '../routes/download';
 
 const router = Router();
 
-router.use('/upload' ,upload)
+router.use('/uploads ', uploadRoutes);
 
-router.use('/download', download)
+router.use('/download', downloadRoutes);
 
-router.get('',(req, res) => {
+router.get('', (req, res) => {
     res.render('Api raiz');
 });
 

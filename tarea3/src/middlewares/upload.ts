@@ -10,7 +10,6 @@ const storage = diskStorage({
         cb(null, 'documents/');
     },
     filename: (req, file, cb) => {
-        const ext = file.originalname.split('.').pop()?.toLowerCase();
         const timestamp = new Date().getTime();
         cb(null, `${timestamp}-${file.originalname}`);
         //cb(null, `${timestamp.toString()}.${(ext)}`);
@@ -20,12 +19,14 @@ const storage = diskStorage({
 //Añadir filtro para validar que sea pdf
 const fileFilter = (req: Request, file: Express.Multer.File, cb: FileFilterCallback) => {
     const fileExt = path.extname(file.originalname).toLowerCase();
-    if (fileExt !== '.application/pdf') {
+    const mimeType = file.mimetype;
+
+    if (fileExt === '.pdf' && mimeType === 'application/pdf') {
         cb(null, true);
     } else {
         cb(new Error('solo se permiten archivos PDF'));
     }
 };
 
-const upload = multer({ storage, fileFilter, limits: { fileSize: 5 * 1024 } }); //Limitar a 5 MB
+const upload = multer({ storage, fileFilter, limits: { fileSize: 5 * 1024 * 1024} }); //Limitar a 5 MB
 export default upload;
