@@ -38,4 +38,4 @@ router.post('/', (req, res) => {
     });
 });
 
-export default upload;
+export default router;
