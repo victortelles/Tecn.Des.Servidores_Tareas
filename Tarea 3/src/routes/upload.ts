@@ -5,7 +5,7 @@ import { HTTP_STATUS_CODES } from "../types/http-status-codes";
 
 const router = Router();
 
-router.post('/', (req, res) => {
+router.post('', (req, res) => {
     //validacion si son varios archivos
     const isMultiple = Array.isArray(req.body.docs);
     const uploadHandler = isMultiple
