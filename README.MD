@@ -23,7 +23,7 @@ git checkout tarea3
 Entra al directorio del proyecto y Ejecuta el siguiente comando para instalar todas las dependencias del proyecto.
 
 ```bash
-cd Tarea 3
+cd Tarea3
 ```
 ```bash
 npm install
@@ -79,7 +79,7 @@ http://localhost:3000/download?file=<[timestamp]-[nombreArchivo].pdf>
 Si todo salio correctamente, debio de salir un codigo 200 y un mensaje exitoso y mostrando el contenido del archivo.
 Recuerda poner todo el nombre del archivo en la url
 
-## Tareas anteriores
+## Enlaces
 1. [Tarea 1 Middleware de Validacion de Rol](https://github.com/victortelles/Tecn.Des.Servidores_Tareas/tree/tarea1)
 2. [Tarea 2 Autenticacion de usuario](https://github.com/victortelles/Tecn.Des.Servidores_Tareas/tree/tarea2)
 3. [Tarea 3 endpoint para descargar o visualizar archivo](https://github.com/victortelles/Tecn.Des.Servidores_Tareas/tree/tarea3)
