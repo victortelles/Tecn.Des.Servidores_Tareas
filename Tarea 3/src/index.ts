@@ -2,11 +2,15 @@ import express from 'express';
 import routes from './routes/index';
 import path from 'path';
 
+//JS, ruta raiz, para documents
+const rootDir = path.resolve(__dirname, '../../');
+
 const app = express();
 
 app.use(express.json());
 
-app.use('/documents', express.static(path.join(__dirname, 'documents')));
+//Ruta relativa para la carpeta de documents en raiz del proyecto
+app.use('/documents', express.static(path.join(rootDir, 'documents')));
 
 const port = process.env.PORT || 3000;
 

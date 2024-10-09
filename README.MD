@@ -53,22 +53,31 @@ Debera de estar corriendo en el puerto **3000**
 Las pruebas las recomiendo a hacer con la herramienta de **Postman**
 
 ### /uploads
-- Ruta: `POST localhost:3000/uploads`
+- Ruta: `POST | localhost:3000/uploads`
+Dentro del **postman** tienes que poner los siguientes campos
+- Selecciona **POST**
+- Selecciona **Body**
+- Selecciona **form-data**
+luego lo siguiente
 ```bash
 {
-
+Key: docs
+type: file
+value: <Documento .pdf> (maximo 5 archivos)
 }
 ```
+Si seleccionas otro formato de extension, este arrojara un error.
 
 ### /downloads
-- Ruta: `GET localhost:3000/downloads`
+- Ruta: `GET |  http://localhost:3000/download?file=<[timestamp]-[nombreArchivo].pdf>`
 ```bash
 {
-
+http://localhost:3000/download?file=<[timestamp]-[nombreArchivo].pdf>
 }
 ```
 
-Si todo salio correctamente, debio de salir un codigo 200 y un mensaje exitoso.
+Si todo salio correctamente, debio de salir un codigo 200 y un mensaje exitoso y mostrando el contenido del archivo.
+Recuerda poner todo el nombre del archivo en la url
 
 ## Enlaces
 1. [Tarea 1 Middleware de Validacion de Rol](https://github.com/victortelles/Tecn.Des.Servidores_Tareas/tree/tarea1)

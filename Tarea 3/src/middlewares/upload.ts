@@ -3,8 +3,11 @@ import multer, { diskStorage, FileFilterCallback } from "multer";
 import path from 'path';
 import fs from 'fs';
 
-// implementacion sobre la carpeta 'documents' existe, si no, crearla
-const documentsFolder = path.join(__dirname, '../../documents');
+// poner la carpeta documents en raiz
+const rootDir = path.resolve(__dirname, '../../');
+const documentsFolder = path.join(rootDir, 'documents');
+
+//Crear carpeta si no existe
 if (!fs.existsSync(documentsFolder)) {
     fs.mkdirSync(documentsFolder, { recursive: true });
 }
@@ -13,7 +16,7 @@ if (!fs.existsSync(documentsFolder)) {
 const storage = diskStorage({
     destination: (req, file, cb) => {
         //Ruta  destino, para almacenar archivo
-        cb(null, 'documents/');
+        cb(null, documentsFolder);
     },
     filename: (req, file, cb) => {
         const timestamp = new Date().getTime();
